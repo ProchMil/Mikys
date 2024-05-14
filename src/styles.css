@@ -1,4 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: auto;
+}
+
+/* Common settings for all phones */
+@media only screen and (max-width: 767px) {
+  /* Adjust font sizes for better readability */
+  body {
+    font-size: 16px;
+  }
+
+  /* Center align text */
+  .container {
+    text-align: center;
+  }
+
+  /* Adjust padding and margins for better spacing */
+  .section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Make buttons larger and easier to tap */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* Make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Simplify navigation menu */
+  .nav-menu {
+    display: none; /* Hide menu by default */
+  }
+
+  /* Show navigation menu when toggle button is clicked */
+  .menu-toggle:checked + .nav-menu {
+    display: block;
+  }
+}
+
+/* Larger */
+/* Large screens (desktops and laptops) */
+@media only screen and (min-width: 1200px) {
+  /* Set a wider container width for content */
+  .container {
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Center the container */
+  }
+
+  /* Increase font sizes for better readability */
+  body {
+    font-size: 18px;
+  }
+
+  /* Use a multi-column layout for better content organization */
+  .content-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Add more spacing between sections */
+  .section {
+    margin-bottom: 40px;
+  }
+
+  /* Make navigation menu horizontal */
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Style links in navigation menu */
+  .nav-menu a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+  /* Add hover effects to navigation links */
+  .nav-menu a:hover {
+    background-color: #eee;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+  body {
+    background-color: green;
+  }
+}
